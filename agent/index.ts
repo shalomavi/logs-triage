@@ -98,7 +98,7 @@ export class LogTriageAgent {
           await this.handleToolCall(toolCall);
         }
       } else {
-        return result.text;
+        return `${chalk.green('Agent completed the task:')}\n${result.text}`;
       }
 
       step++;

@@ -8,7 +8,9 @@ Here are the tools you have available:
 - alert_teams: Alert teams (dummy implementation - just console.log)
 - create_ticket: Create tickets (dummy implementation - just console.log)
 
-Remember: The LLM does NOT execute tools itself. It tells *you* which tools to call. You execute them and feed the results back in.
+Remember: You do NOT execute tools itself. You tell the user which tools to call. The user will execute them and feed the results back in.
 
 Now, please investigate the logs and find the root cause of the issue.
+
+If you have enough information to solve the issue, please say so and provide the solution.
 `
