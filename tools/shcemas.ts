@@ -6,9 +6,10 @@ export const FILTER_RESULT_LIMIT = 5
 
 export const tools = {
     search_logs: tool({
-        description: `Returns a filtered subset of logs based on criteria. Only the first ${FILTER_RESULT_LIMIT} results are added to the memory, and the rest are truncated to save context. If relevant, let the user know that the results have been truncated.`,
+        description: `search for logsSearch logs by identifiers`,
         inputSchema: z.object({
-            groupBy: z.enum(['time', 'service', 'level', 'msg']).describe('How to group: time, service, level, or msg'),
+            identifier_type: z.enum(['request_id', 'user_id']).describe('Type of identifier'),
+            identifier_value: z.string().describe('Value of identifier'),
         })
     }),
 

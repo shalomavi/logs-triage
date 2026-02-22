@@ -74,12 +74,12 @@ export class LogTriageAgent {
     }
   }
 
-  async run(query: string): Promise<string> {
+  async run(): Promise<string> {
 
-    this.agentMemory.push({
-      role: 'user',
-      content: query,
-    });
+    // this.agentMemory.push({
+    //   role: 'user',
+    //   content: "",
+    // });
 
     let step = 0;
     while (step < MAX_STEPS) {
